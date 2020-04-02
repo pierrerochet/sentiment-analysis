@@ -237,10 +237,10 @@ public class SentimentAnalyzer {
 	 * <p>Les fichiers sont classés par sentiment
 	 * 	  dans des dossier nommés respectivement :</p>
 	 * 			<ul>
-	 * 			<li>very-positive</li>
-	 * 			<li>positive</li>
-	 * 			<li>negative</li>
-	 * 			<li>very-negative</li>		
+	 * 			<li>VP</li>
+	 * 			<li>P</li>
+	 * 			<li>N</li>
+	 * 			<li>VP</li>		
 	 * 			</ul>
 	 * 
 	 * @see #classifyFromFolderType2
