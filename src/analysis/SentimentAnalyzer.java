@@ -25,11 +25,20 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.util.CoreMap;
 
 
+/**
+ * 
+ * <p>L'analyseur de sentiment qui
+ * repose sur le module StanfordCoreNLP</p>
+ * 
+ * @author rochet
+ * 
+ */
 public class SentimentAnalyzer {
 	
 	protected Properties props;
 	protected StanfordCoreNLP pipeline;
 	
+
 	public SentimentAnalyzer() {
 		this.props = new Properties();
 		props.setProperty("annotators", "tokenize, ssplit, pos, parse, sentiment");
@@ -37,7 +46,7 @@ public class SentimentAnalyzer {
 	}
 	
 	/**
-	 * Analyse les phrases contenues dans un fichier.
+	 * <p>Analyse les phrases contenues dans un <b>fichier</b>.</p>
 	 * 
 	 * @param pathFile
 	 * 				Le chemin du fichier à analyser.
@@ -55,7 +64,7 @@ public class SentimentAnalyzer {
 	
 
 	/**
-	 * Analyse les phrases contenues dans une liste contenant des chaînes de caractèrtes.
+	 * <p>Analyse les phrases contenues dans une liste contenant des chaînes de caractèrtes.</p>
 	 * 
 	 * @param sentencesList
 	 * 				La liste contenant les phrases à analyser.
@@ -94,11 +103,14 @@ public class SentimentAnalyzer {
       
 
 	/**
-	 * Lance une classification de type 1 sur tous les fichiers d'un répertoire.
-	 * Classification de type 1 :
-	 * 		Pour chaque fichier présent dans le répertoire un nouveau fichier est crée. 
-	 * 		Il contient la liste de toutes les phrases du fichier classées par sentiment.
-	 * 		Pour chaque sentiment les phrases sont classées par ordre décroissant de la valeur du sentiment.
+	 * <p>Lance une classification de type 3 sur tous les fichiers d'un répertoire.</p>
+	 * <p>Classification de type 3 :</p>
+	 * <p>Pour chaque fichier présent dans le répertoire un nouveau fichier est crée. 
+	 * 	  Il contient la liste de toutes les phrases du fichier classées par sentiment.
+	 * 	  Pour chaque sentiment les phrases sont classées par ordre décroissant de la valeur du sentiment.</p>
+	 * 
+	 * @see #classifyFromFolderType2
+	 * @see #classifyFromFolderType3
 	 * 
 	 * @param inputCorpusPath
 	 * 		Le chemin du repertoire contenant les fichiers à classer.
@@ -142,16 +154,21 @@ public class SentimentAnalyzer {
 	}
 	
 	/**
-	 * Lance une classification de type 2 sur tous les fichiers d'un répertoire.
-	 * Classification de type 2 :
-	 * 		Toutes les phrases de tous les fichiers sont classées par sentiments 
-	 * 		dans des fichiers nommées respectivement :
-	 * 			- VP.txt
-	 * 			- P.txt
-	 * 			- N.txt
-	 * 			- VN.txt
-	 * 		Dans les fichiers de sorties les phrases sont classées 
-	 * 		par ordre décroissement de la valeur du sentiment.
+	 * <p>Lance une classification de type 2 sur tous les fichiers d'un répertoire.</p>
+	 * <p>Classification de type 2 :</p>
+	 * <p>Toutes les phrases de tous les fichiers sont classées par sentiment 
+	 * 	  dans des fichiers nommés respectivement :</p>
+	 * 			<ul>
+	 * 			<li>VP.txt</li>
+	 * 			<li>P.txt</li>
+	 * 			<li>N.txt</li>
+	 * 			<li>VN.txt</li>
+	 * 			</ul>
+	 * <p>Dans les fichiers de sorties les phrases sont classées 
+	 *    par ordre décroissement de la valeur du sentiment.<p>
+	 * 
+	 * @see #classifyFromFolderType1
+	 * @see #classifyFromFolderType3
 	 * 
 	 * @param inputCorpusPath
 	 * 		Le chemin du repertoire contenant les fichiers à classer.
@@ -192,14 +209,19 @@ public class SentimentAnalyzer {
 	}
 	
 	/***
-	 * Lance une classification de type 1 sur tous les fichiers d'un répertoire.
-	 * Classification de type 1 :
-	 * 		Les fichiers sont classés par sentiment dans 
-	 * 		dans des dossier nommées respectivement :
-	 * 			- very-positive
-	 * 			- positive
-	 * 			- negative
-	 * 			- very-negative			
+	 * <p>Lance une classification de type 1 sur tous les fichiers d'un répertoire.
+	 *    Classification de type 1 :</p>
+	 * <p>Les fichiers sont classés par sentiment
+	 * 	  dans des dossier nommés respectivement :</p>
+	 * 			<ul>
+	 * 			<li>very-positive</li>
+	 * 			<li>positive</li>
+	 * 			<li>negative</li>
+	 * 			<li>very-negative</li>		
+	 * 			</ul>
+	 * 
+	 * @see classifyFromFolderType2
+	 * @see classifyFromFolderType3
 	 * 
 	 * @param inputCorpusPath
 	 * 		Le chemin du repertoire contenant les fichiers à classer.
