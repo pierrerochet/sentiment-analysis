@@ -10,15 +10,17 @@ public class App {
 		
 		SentimentAnalyzer Analyzer = new SentimentAnalyzer();
 		
-		String inputCorpusPath = "/home/rochet/corpora/dossier_test/obama-texts/";
+		String inputCorpusPath = "/home/rochet/git/corpus-test";
 		
-//		String outputFolderPathT1 = "/home/rochet/corpora/obama-texts-classif-1/";
-//		Analyzer.classifyFromFolderType1(inputCorpusPath, outputFolderPathT1);
-//		
-		String outputFolderPathT2 = "/home/rochet/corpora/obama-texts-classif-2/";
-		Analyzer.classifyFromFolderType2(inputCorpusPath, outputFolderPathT2);
+		// ATTENTION : Bien mettre les "/" avant et après les chemins
 		
-//		String outputFolderPathT3 = "/home/rochet/corpora/obama-texts-classif-3/";
+		String outputFolderPathT1 = "/home/rochet/git/output-test-classif-1/";
+		Analyzer.classifyFromFolderType1(inputCorpusPath, outputFolderPathT1);
+		
+//		String outputFolderPathT2 = "/home/rochet/git/output-test-classif-2/";
+//		Analyzer.classifyFromFolderType2(inputCorpusPath, outputFolderPathT2);
+		
+//		String outputFolderPathT3 = "/home/rochet/git/output-test-classif-3/";
 //		Analyzer.classifyFromFolderType3(inputCorpusPath, outputFolderPathT3);
 	
 	}

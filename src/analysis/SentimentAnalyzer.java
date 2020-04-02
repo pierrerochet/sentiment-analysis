@@ -154,9 +154,10 @@ public class SentimentAnalyzer {
 			HashMap<String, ArrayList<CustomSentenceSent>> clusterMap = dataset.getClustersSorted();
 			
 			for (Entry<String,ArrayList<CustomSentenceSent>> cluster : clusterMap.entrySet()) {
-				resultArray.add("### " + cluster.getKey());
+				String clusterName = cluster.getKey();
+				resultArray.add("### " + clusterName);
 				for (CustomSentenceSent sent : cluster.getValue()) {
-					resultArray.add(sent.toString());
+					resultArray.add(String.format("%s\t%.3f", sent.getText(), sent.getSentValues().get(clusterName) ) );
 				}
 				resultArray.add("\n");
 			}
@@ -214,10 +215,11 @@ public class SentimentAnalyzer {
 		
 		for (Entry<String,ArrayList<CustomSentenceSent>> cluster : clusterMap.entrySet()) {
 			ArrayList<String> result = new ArrayList<String>();
+			String clusterName = cluster.getKey();
 			for (CustomSentenceSent sent : cluster.getValue()) {
-				result.add(sent.toString());
+				result.add(String.format("%s\t%.3f", sent.getText(), sent.getSentValues().get(clusterName) ) );
 			}
-			Path outputPath = Paths.get(outputFolderPath + cluster.getKey() + ".txt");
+			Path outputPath = Paths.get(outputFolderPath + clusterName + ".txt");
 			Files.write(outputPath, result, Charset.forName("UTF-8"));
 		}
 		
@@ -257,10 +259,10 @@ public class SentimentAnalyzer {
 		}
 		
 		ArrayList<String> foldersClass = new ArrayList<String>();
-		foldersClass.add("very-positive");
-		foldersClass.add("positive");
-		foldersClass.add("negative");
-		foldersClass.add("very-negative");
+		foldersClass.add("VP");
+		foldersClass.add("P");
+		foldersClass.add("N");
+		foldersClass.add("VN");
 
 		for (String pathClass: foldersClass) {
 			File classFile = new File(outputFolderPath + pathClass);
@@ -274,17 +276,17 @@ public class SentimentAnalyzer {
 			String pathFile = File.getPath();
 			String fileName = File.getName();
 			
-			System.out.println("%% Process : " + File);
+			System.out.println("%% Process : " + fileName);
 			
 			List<String> lines = Files.readAllLines(Paths.get(pathFile), StandardCharsets.UTF_8);
 			CustomDatasetSent dataset = this.analyzeFromList(lines);
 			String label = dataset.getLabel();
 			
 			switch(label) {
-			case "VP": Files.write(Paths.get(outputFolder + "/very-positive/" + fileName), lines, Charset.forName("UTF-8"));
-			case "V": Files.write(Paths.get(outputFolder + "/positive/" + fileName), lines, Charset.forName("UTF-8"));
-			case "N": Files.write(Paths.get(outputFolder + "/negative/" + fileName), lines, Charset.forName("UTF-8"));
-			case "VN": Files.write(Paths.get(outputFolder + "/very-negative/" + fileName), lines, Charset.forName("UTF-8"));
+			case "VP": Files.write(Paths.get(outputFolder + "/VP/" + fileName), lines, Charset.forName("UTF-8")); break;
+			case "P": Files.write(Paths.get(outputFolder + "/P/" + fileName), lines, Charset.forName("UTF-8")); break;
+			case "N": Files.write(Paths.get(outputFolder + "/N/" + fileName), lines, Charset.forName("UTF-8")); break;
+			case "VN": Files.write(Paths.get(outputFolder + "/VN/" + fileName), lines, Charset.forName("UTF-8")); break;
 			}
 			
 		}
