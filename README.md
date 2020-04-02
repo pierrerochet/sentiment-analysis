@@ -29,7 +29,7 @@ Note : Dans les fichiers, pour chaque classe les phrases sont triées par valeur
 
 ![](images/type3.png)
 
-Les fichiers de sortie sont de la forme:
+Les fichiers de sortie sont de la forme :
 
 ```
 ### VP
