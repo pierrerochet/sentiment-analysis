@@ -130,6 +130,8 @@ public class SentimentAnalyzer {
 	 */
 	public void classifyFromFolderType3(String inputCorpusPath, String outputFolderPath) throws IOException {
 		
+		System.out.println("Start classification : Type 3");
+		
 		File corpus = new File(inputCorpusPath);
 		File[] listFiles = corpus.listFiles();
 		
@@ -194,6 +196,8 @@ public class SentimentAnalyzer {
 	 */
 	public void classifyFromFolderType2(String inputCorpusPath, String outputFolderPath) throws IOException {
 		
+		System.out.println("Start classification : Type 2");
+		
 		File corpus = new File(inputCorpusPath);
 		File[] listFiles = corpus.listFiles();
 		
@@ -250,6 +254,9 @@ public class SentimentAnalyzer {
 	 * @throws IOException
 	 */
 	public void classifyFromFolderType1(String inputCorpusPath, String outputFolderPath) throws IOException {
+		
+		System.out.println("Start classification : Type 1");
+		
 		File corpus = new File(inputCorpusPath);
 		File[] listFiles = corpus.listFiles();
 		

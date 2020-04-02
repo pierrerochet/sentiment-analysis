@@ -1,0 +1,74 @@
+### P
+The rules of the game have changed.	0,798
+Finally, we should work to close the gap that is widening between America and the rest of the world when it comes to math and science graduates.	0,652
+In Illinois alone we have 238,000 high-tech workers.	0,606
+Those are goals we all have and hopes we all share.	0,593
+Yes, the rules of the game have changed.	0,576
+We can take comfort in knowing that, but we can't take it for granted, because right now other countries are looking at places like Silicon Valley and North Carolina's Research Triangle and saying "we want that."	0,575
+The tests we have now are great ways to gather information about what works and what doesn't, but they're not enough.	0,520
+They surf web page after web page on the Internet, but are never taught how to design one.	0,499
+The best part about Bill Gates' speech last week was when he said that our schools are in danger of becoming obsolete as tools to educate tomorrow's workers for tomorrow's jobs.	0,479
+Their kids are ready.	0,450
+TechNet is ready.	0,444
+Thank you John Doer.	0,385
+We can do better when it comes to using technology to free ourselves from America's dangerous dependence on Mideast oil.	0,339
+
+
+### VN
+We can do better than burdening businesses with cases of class action abuse, and that's why I cast a tough vote in favor of reform the other week.	0,522
+
+
+### VP
+And so it's time to put aside partisan differences and just talk about what works for our kids and what will keep America competitive in this new century.	0,858
+And now it's time for us to prove to the world that we can still play better than anyone.	0,815
+And we can do better, think bigger, and act bolder when it comes to education in this country.	0,809
+The good news is that we have the resources, we have the brainpower, and we are still an economic and technological giant.	0,782
+It's great to be here with all of you today, and I'm honored that you've given me the opportunity to join this discussion about the role technology can play in our future and our children's future.	0,678
+This is the great project for our time, and so it must become a larger part of the debate in our politics, our businesses, our schools and our homes.	0,646
+Thank you.	0,633
+As parents and citizens, each of us has a stake in making sure that our schools are doing everything possible to give our kids the competitive edge they'll need in a 21st century economy.	0,622
+To do this, we must start by inspiring our children with a sense of purpose...by nurturing their imagination so that they may dream big and then work hard to reach those dreams.	0,619
+Our schools must begin instilling that wonder in our children again so that their generation will unite around the next great project of our time, whether it be declaring America energy independent or launching the next great technological revolution.	0,604
+That's why charter schools are a great way for us to learn from experiments in Topeka and Springfield that schools in Chicago and L.A. can replicate in their own classrooms.	0,551
+We can't leave kids behind before they even enter the first grade, and that's why I'll continue to focus on early childhood education as a way to give them the best start in life.	0,548
+And so we must change with them.	0,539
+What's more, they know that when it comes to the high-tech, high skill jobs of the future, their children are not only competing with children here in the United States, but with those on the other side of the globe who are increasingly being educated earlier, longer, and with a special emphasis on the math and science skills required for the industries of tomorrow.	0,531
+And in the coming months, I will do my best to work with my colleagues and make sure our government is ready too.	0,515
+All across America, world-class universities, first-rate research facilities and brilliant minds are on the cusp of discovering the next big idea that will lift up the quality of our lives, create millions of new jobs, and change our world.	0,454
+John Doer's work with the New Schools Venture Fund is leading the way on this front, and we should all commend him for that.	0,437
+We also know that some of the best ideas in education don't come from Washington, but from local schools all over America.	0,367
+Thank you Rick.	0,362
+
+
+### N
+Too often, our children spend hours playing Playstation without ever finding out how to build Playstation.	0,735
+We shouldn't wait until high school either.	0,719
+And before we begin, I'd just like to recognize your CEO, Rick White, who is leaving TechNet after years of inspired leadership and service to this organization and this country.	0,710
+Too often, the debate about education here in Washington degenerates to old arguments and stale ideas.	0,691
+We should give local schools the latest technology training tools as John Chambers has done with the CISCO Networking Academy Program.	0,689
+But in a country of innovators and optimists - a country that pioneered the first moon landing, discovered the cure for polio, and led the technological revolution of the nineties - I have no doubt that we can.	0,677
+They worry that they could become the first generation of Americans to see their children do worse than they did.	0,640
+The University of Illinois at Champagne-Urbana is where Marc Andreesen developed Mosaic, the browser that made the World Wide Web what it is today.	0,637
+They're investing in better universities, expanding research budgets and venture capital, producing more science and engineering graduates, and passing innovation-friendly public policies.	0,625
+The families I've met are ready to try.	0,613
+We can do better than falling to 10th place in the world when it comes to providing people with access to Broadband.	0,610
+And because the success of your businesses depend on your ability to fill jobs with great minds, we need more corporate and private investment in our schools.	0,607
+They know that when it comes to their jobs and their wages, they're not only competing with workers in Naperville and Carbondale, but in New Delhi and Calcutta.	0,597
+When I was at the University of Chicago, other faculty members and myself developed a program where we essentially adopted primary schools to help them learn how to use the technological opportunities they were being offered.	0,589
+We have to start the way Jim Barksdale of Netscape did when he gave a big grant and a lot of hope to preschoolers in Mississippi.	0,587
+They remember that when we were all growing up, our parents knew that if they pushed us to study and work hard, the best universities would be open to us and we could get any job we wanted.	0,586
+We're here today because when it comes to the global economy, the rules of the game have changed.	0,581
+This is a fact not only understood by a roomful of Silicon Valley CEOs, but by families I met all across Illinois during the campaign.	0,551
+None of us expect or want the government to lead the next technological revolution, but I believe that we can provide the spark that fuels America's innovation and competitiveness in the global economy.	0,530
+I want to thank TechNet for doing your part to get this dialogue going, and now I'd like to take a few questions from the audience.	0,528
+They watch television but never wonder how it's put together.	0,525
+But schools are where our children's dreams begin, and so schools are where we must begin to make those dreams come true.	0,521
+It's not enough just to set down a computer in a classroom and walk away - we must also train teachers and administrators on how to use that computer and its technology to find new and better ways of educating our children.	0,473
+These families tell me that they're anxious about their future.	0,467
+But today, parents in cities and towns all over America are losing that hope - they're losing the sense that their kids will be able to dream the American dream.	0,438
+I believe that to meet tomorrow's challenges, we should create a national network of academies to train 25,000 new teachers and get them into high-need rural and urban schools.	0,431
+And right now at Argonne National Laboratory, scientists are developing the technology for "grid computing" - which IBM and others believe represents the future of the IT industry.	0,400
+The incredible story of progress that is America has always been built by those who ask why, what if, and why not.	0,372
+I believe we can do better than cutting the budget for the National Science Foundation, as this year's budget has done for the first time.	0,331
+
+
