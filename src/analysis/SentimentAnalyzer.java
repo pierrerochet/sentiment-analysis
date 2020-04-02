@@ -27,18 +27,27 @@ import edu.stanford.nlp.util.CoreMap;
 
 /**
  * 
- * <p>L'analyseur de sentiment qui
- * repose sur le module StanfordCoreNLP</p>
+ * L'analyseur de sentiment qui
+ * repose sur le module StanfordCoreNLP
  * 
  * @author rochet
  * 
  */
 public class SentimentAnalyzer {
 	
+	/**
+	 * Les propriétés de l'analyseur Stanford.
+	 */
 	protected Properties props;
+	
+	/**
+	 * L'analyseur Stanford.
+	 */
 	protected StanfordCoreNLP pipeline;
 	
-
+	/**
+	 * Constructeur qui instancie l'analyseur Stanford avec les propriétés.
+	 */
 	public SentimentAnalyzer() {
 		this.props = new Properties();
 		props.setProperty("annotators", "tokenize, ssplit, pos, parse, sentiment");
@@ -46,7 +55,7 @@ public class SentimentAnalyzer {
 	}
 	
 	/**
-	 * <p>Analyse les phrases contenues dans un <b>fichier</b>.</p>
+	 * Analyse les phrases contenues dans un fichier.
 	 * 
 	 * @param pathFile
 	 * 				Le chemin du fichier à analyser.
@@ -131,10 +140,13 @@ public class SentimentAnalyzer {
 		
 		for (File File : listFiles) {
 			
-			ArrayList<String> resultArray = new ArrayList<String>();
-			
 			String pathFile = File.getPath();
 			String fileName = File.getName();
+			
+			System.out.println("%% Process : " + fileName);
+			
+			ArrayList<String> resultArray = new ArrayList<String>();
+			
 			Path outputFile = Paths.get(outputFolderPath + fileName);
 			
 			CustomDatasetSent dataset = this.analyzeFromFile(pathFile);
@@ -151,6 +163,8 @@ public class SentimentAnalyzer {
 
 			Files.write(outputFile, resultArray, Charset.forName("UTF-8"));
 		}
+		
+		System.out.println("Done.");
 	}
 	
 	/**
@@ -185,6 +199,7 @@ public class SentimentAnalyzer {
 		CustomDatasetSent datasetTotal = new CustomDatasetSent();
 		
 		for (File File : listFiles) {
+			System.out.println("%% Process : " + File.getName());
 			String pathFile = File.getPath();
 			CustomDatasetSent dataset = this.analyzeFromFile(pathFile);
 			datasetTotal.concat(dataset);
@@ -206,6 +221,8 @@ public class SentimentAnalyzer {
 			Files.write(outputPath, result, Charset.forName("UTF-8"));
 		}
 		
+		System.out.println("Done.");
+		
 	}
 	
 	/***
@@ -220,8 +237,8 @@ public class SentimentAnalyzer {
 	 * 			<li>very-negative</li>		
 	 * 			</ul>
 	 * 
-	 * @see classifyFromFolderType2
-	 * @see classifyFromFolderType3
+	 * @see #classifyFromFolderType2
+	 * @see #classifyFromFolderType3
 	 * 
 	 * @param inputCorpusPath
 	 * 		Le chemin du repertoire contenant les fichiers à classer.
@@ -257,6 +274,8 @@ public class SentimentAnalyzer {
 			String pathFile = File.getPath();
 			String fileName = File.getName();
 			
+			System.out.println("%% Process : " + File);
+			
 			List<String> lines = Files.readAllLines(Paths.get(pathFile), StandardCharsets.UTF_8);
 			CustomDatasetSent dataset = this.analyzeFromList(lines);
 			String label = dataset.getLabel();
@@ -270,6 +289,9 @@ public class SentimentAnalyzer {
 			
 		}
 		
+		System.out.println("Done.");
+		
 	}
+	
 
 }

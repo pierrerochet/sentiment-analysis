@@ -6,21 +6,41 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class CustomDatasetSent {
 
+/**
+ * Un Dataset personalisé pour manipuler des CustomSentenceSent.
+ * Il facilite notamment les opérations de trie des phrases d'un corpus.
+ * 
+ * @author rochet
+ *
+ */
+public class CustomDatasetSent {
+	
+	/**
+	 * La liste des CustomSentencesSent.
+	 */
 	protected ArrayList<CustomSentenceSent> customSentences;
 	
+	/**
+	 * Constructeur qui crée un CustomDatasetSent avec une liste de CustomSentenceSent.
+	 * @param data
+	 * 			La liste des CustomSentenceSent à utiliser pour remplir le dataset
+	 */
 	public CustomDatasetSent(ArrayList<CustomSentenceSent> data) {
 		this.customSentences = data;
 	}
 	
+	/**
+	 * Constructeur qui crée un CustomDatasetSent vide.
+	 */
 	public CustomDatasetSent() {
 		this.customSentences = new ArrayList<CustomSentenceSent>();
 	}
 	
 	
 	/**
-	 * Ajoute le contenu d'un CustomDatasetSent dans le CustomDataset courant
+	 * Ajoute le contenu d'un CustomDatasetSent dans ce CustomDatasetSent.
+	 * 
 	 * @param dataset
 	 * 			Le CustomDatasetSent à ajouter
 	 */
@@ -28,19 +48,41 @@ public class CustomDatasetSent {
 		this.customSentences.addAll(dataset.getCustomSentences());
 	}
 	
+	/**
+	 * Affiche une représentation du CustomDatasetSent
+	 */
 	@Override
 	public String toString() {
 		return customSentences.toString();
 	}
 	
+	/**
+	 * Ajoute une CustomSentenceSent au CustomDatasetSent.
+	 * 
+	 * @param customSent
+	 * 			La CustomSentenceSent à ajouter
+	 */
 	public void add(CustomSentenceSent customSent) {
 		this.customSentences.add(customSent);
 	}
 	
+	/**
+	 * Renvoie la liste des CustomSentenceSent contenue dans le CustomDatasetSent.
+	 * 
+	 * @return
+	 * 		La liste des CustomSentenceSent contenue dans le CustomDatasetSent.
+	 */
 	public ArrayList<CustomSentenceSent> getCustomSentences() {
 		return customSentences;
 	}
 	
+	/**
+	 * Calcule les moyennes des sentiments de l'ensemble 
+	 * des CustomSentenceSent contenues dans le CustomSentenceSent.
+	 * 
+	 * @return
+	 * 		Les sentiments et les valeurs moyennes associées
+	 */
 	public HashMap<String, Double> getMeanSent() {
 		
 		double VP = 0;
@@ -68,13 +110,28 @@ public class CustomDatasetSent {
 		
 	}
 	
+	/**
+	 * Calcule le sentiment mojoritaire de l'ensemble des CustomSentenceSent 
+	 * contenues dans le CustomDatasetSent.
+	 * 
+	 * Appelle la méthode getMeanSent puis renvoie le label avec la moyenne la plus élevée.
+	 * 
+	 * @return
+	 * 		La sentiment majoritaire : VP, P, N ou VN.
+	 */
 	public String getLabel() {
 		HashMap<String, Double> sentValues = this.getMeanSent();
 		Entry<String, Double> maxVal = Collections.max( sentValues.entrySet(), (Entry<String, Double> val1, Entry<String, Double> val2) -> val1.getValue().compareTo(val2.getValue() ) );
 		return maxVal.getKey();
 	}
 
-	
+	/**
+	 * Classe les CustomSentenceSent contenues dans le CustomDatasetSent 
+	 * en fonction de leur sentiment majoritaire.
+	 * 
+	 * @return
+	 * 			Les CustomSentenceSent triées dans les classes : VP, P, N, VN.
+	 */
 	public HashMap<String, ArrayList<CustomSentenceSent>> getClusters() {
 		HashMap<String, ArrayList<CustomSentenceSent>> clusters = new HashMap<String, ArrayList<CustomSentenceSent>>();
 		clusters.put("VP", new ArrayList<CustomSentenceSent>());
@@ -88,6 +145,16 @@ public class CustomDatasetSent {
 		return clusters;
 	}
 	
+	
+	/**
+	 * Classe les CustomSentenceSent contenues dans le CustomDatasetSent 
+	 * en fonction de leur sentiment majoritaire. 
+	 * Chaque classe est ensuite triée par ordre décroissant 
+	 * de la valeur du sentiment de la classe.
+	 * 
+	 * @return
+	 * 			Les CustomSentenceSent classées par sentiment puis triées par ordre décroisant.
+	 */
 	public HashMap<String, ArrayList<CustomSentenceSent>> getClustersSorted() {
 		HashMap<String, ArrayList<CustomSentenceSent>> clusters = this.getClusters();
 		clusters.get("VP").sort(CustomSentenceSent.VeryPositiveComparator);
